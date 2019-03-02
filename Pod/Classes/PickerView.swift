@@ -579,6 +579,7 @@ extension PickerView: UITableViewDataSource {
         if (view != nil) {
             var frame = view!.frame
             frame.origin.y = (indexPath as NSIndexPath).row == 0 ? (self.frame.height / 2) - (rowHeight / 2) : 0.0
+            frame.size.height = rowHeight
             view!.frame = frame
             pickerViewCell.customView = view
             pickerViewCell.contentView.addSubview(pickerViewCell.customView!)
